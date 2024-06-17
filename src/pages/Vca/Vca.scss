@@ -1,13 +1,10 @@
 .vca-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Arial', sans-serif;
-  margin-bottom: 20px; /* Agrega un margen inferior para separar del contenido siguiente */
-}
-
-/* Estilos para las tablas y otros elementos omitidos para brevedad */
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+  }
   
   /* Estilos para la tabla principal */
   .vca-table {

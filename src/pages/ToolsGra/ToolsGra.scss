@@ -1,14 +1,12 @@
-/* Contenedor principal */
+/* Estilos para ToolsGra component */
 .tools-gra-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
   font-family: 'Arial', sans-serif;
- 
 }
 
-/* Información de la empresa */
 .company-info {
   margin-bottom: 20px;
   text-align: center;
@@ -26,7 +24,6 @@
   color: #666;
 }
 
-/* Estilos para la tabla */
 .tools-gra-table {
   width: 100%;
   max-width: 1000px;
@@ -35,6 +32,7 @@
   background-color: #fff;
   overflow: hidden;
   border-radius: 10px;
+  margin-top: 20px;
 }
 
 .tools-gra-table th,
@@ -69,7 +67,6 @@
   border-bottom: 1px solid #ddd;
 }
 
-/* Estilos para las celdas que contienen herramientas */
 .tools-cell {
   display: flex;
   flex-direction: column;
@@ -85,4 +82,41 @@
 .tools-cell a:hover {
   color: #0056b3;
   text-decoration: underline;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .tools-gra-container {
+    padding: 0 10px; /* Ajustamos el padding horizontal */
+  }
+
+  .company-info h2 {
+    font-size: 20px;
+  }
+
+  .company-info h3 {
+    font-size: 18px;
+  }
+
+  .tools-gra-table {
+    max-width: 100%;
+
+    box-shadow: none;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  .tools-gra-table thead th {
+    font-size: 16px;
+    padding: 12px 15px;
+  }
+
+  .tools-gra-table td,
+  .tools-gra-table th {
+    padding: 10px;
+  }
+
+  .tools-cell a {
+    padding: 3px 0;
+  }
 }
