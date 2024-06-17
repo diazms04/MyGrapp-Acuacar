@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import NavBar from '../../components/NavBar/NavBar'
+import NavBar from '../../components/NavBar/NavBar';
 import BackButton from '../../components/BackButton/BackButton';
 
 import './Vca.scss';
-
 
 function Vca() {
   const [proveedor1, setProveedor1] = useState('');
@@ -23,6 +22,7 @@ function Vca() {
       <div className='title_tools'>
         <h1>1.1. Verificación de las condiciones de abastecimiento </h1>
       </div>
+
       <table className='vca-table'>
         <thead>
           <tr>
