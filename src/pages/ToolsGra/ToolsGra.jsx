@@ -1,15 +1,22 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './ToolsGra.scss'; // Archivo de estilos
 import NavBar from '../../components/NavBar/NavBar';
+
 
 export default function ToolsGra() {
   const location = useLocation();
   const { companyName, nit } = location.state || {}; // Obtiene los datos pasados por la navegación
 
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/diagnosis');
+
+  };
   return (
     <>
-      <NavBar /> {/* Incluimos el NavBar fuera del contenedor principal */}
+      <NavBar rightChildren={<button className="back-button" onClick={handleButtonClick}>Informe</button>}/> {/* Incluimos el NavBar fuera del contenedor principal */}
       <div className='tools-gra-container'>
         <div className='company-info'>
           <h2>Empresa: {companyName}</h2>

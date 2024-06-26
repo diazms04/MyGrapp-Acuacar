@@ -8,7 +8,6 @@ function Esctaa() {
   const [sector, setSector] = useState('gastronomico');
   const [inputValue, setInputValue] = useState(0);
   const [consumo, setConsumo] = useState(0);
-  const [porcentaje, setPorcentaje] = useState('');
   const [estado, setEstado] = useState('');
   const [valorE1Texto, setValorE1Texto] = useState('');
   const [estadosTabla3, setEstadosTabla3] = useState({
@@ -27,7 +26,6 @@ function Esctaa() {
     setSector(event.target.value);
     setInputValue(0);
     setConsumo(0);
-    setPorcentaje('');
     setEstado('');
     setValorE1Texto('');
   };
@@ -89,6 +87,10 @@ function Esctaa() {
   };
 
   const selectedSector = sectores.find((s) => s.value === sector);
+
+  const handleSaveToLocalStorage = () => {
+    localStorage.setItem('resultadoEvaluacion', estado);
+  };
 
   return (
     <div className="esctaa-container">
@@ -233,6 +235,8 @@ function Esctaa() {
           </tr>
         </tbody>
       </table>
+
+      <button className="back-button" onClick={handleSaveToLocalStorage}>Guardar Resultado de Evaluación</button>
     </div>
   );
 }
