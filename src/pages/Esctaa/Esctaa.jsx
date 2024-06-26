@@ -42,7 +42,7 @@ function Esctaa() {
 
   const handleValor2Change = (event) => {
     const valor2 = parseInt(event.target.value);
-    if (valor2 === 0) {
+    if (valor2 <50 ) {
       setEstado('Riesgo crítico-insatisfactorio');
       setValorE1Texto('¡ALERTA! Su sistema de almacenamiento cuenta con capacidad insuficiente para almacenar y abastecer sus actividades. Es importante que tome acciones inmediata en relación a lo siguiente.- Planifique e implemente a corto plazo los ajustes correspondientes al sistema de abastecimiento.- Verifique y proyecte su capacidad para tomar decisiones correctas en el dimensionamiento del sistema.- Refuerce de manera temporal las medidas de ahorro y consumo en su establecimiento.');
     } else {
