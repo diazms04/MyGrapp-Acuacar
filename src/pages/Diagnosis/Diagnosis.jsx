@@ -33,9 +33,9 @@ export default function Diagnosis() {
 
   const getAnalisisRecomendaciones = () => {
     if (resultadoEvaluacion === 'Óptimo - satisfactorio') {
-      return '¡EXCELENTE! Su capacidad de almacenamiento para abastecimiento es ideal para el abastecimiento de su actividad productiva por 24 h. Le sugerimos evaluar las condiciones y/o estado de los sistemas de almacenamiento para su correcto funcionamiento en términos de calidad.';
+      return '¡EXCELENTE! Su capacidad de almacenamiento para abastecimiento es ideal';
     } else if (resultadoEvaluacion === 'Riesgo crítico-insatisfactorio') {
-      return '¡ALERTA! Su sistema de almacenamiento cuenta con capacidad insuficiente para almacenar y abastecer sus actividades. Es importante que tome acciones inmediatas en relación a lo siguiente.- Planifique e implemente a corto plazo los ajustes correspondientes al sistema de abastecimiento.- Verifique y proyecte su capacidad para tomar decisiones correctas en el dimensionamiento del sistema.- Refuerce de manera temporal las medidas de ahorro y consumo en su establecimiento.';
+      return '¡ALERTA! Su sistema de almacenamiento cuenta con capacidad insuficiente .';
     }
     return '';
   };
@@ -47,14 +47,15 @@ export default function Diagnosis() {
         <table>
           <thead>
             <tr>
-              <th colSpan="5">Verificación de las condiciones de abastecimiento</th>
+              <th colSpan="6">Verificación de las condiciones de abastecimiento</th>
             </tr>
             <tr>
               <th>ELEMENTO</th>
               <th>VARIABLE</th>
               <th>RESULTADOS</th>
               <th>VALORACIÓN</th>
-              <th>ANÁLISIS Y RECOMENDACIONES</th>
+              <th>DIAGNOSTICO</th>
+              <th>SERVICIO RECOMENDADO</th>
             </tr>
           </thead>
           <tbody>
@@ -64,6 +65,7 @@ export default function Diagnosis() {
               <td className={getResultadoClass()}>{resultadoEvaluacion}</td>
               <td>{getValoracion()}</td>
               <td>{getAnalisisRecomendaciones()}</td>
+              <td>servicio</td>
             </tr>
             <tr>
               <td rowSpan="2">Mantenimiento</td>
@@ -71,12 +73,14 @@ export default function Diagnosis() {
               <td className={getResultadoClass()}>{resultadoEvaluacion}</td>
               <td>{getValoracion()}</td>
               <td>{getAnalisisRecomendaciones()}</td>
+              <td>servicio</td>
             </tr>
             <tr>
               <td>Seguimiento al cumplimiento normativo actividades de limpieza y desinfección</td>
               <td className={getResultadoClass()}>{resultadoEvaluacion}</td>
               <td>{getValoracion()}</td>
               <td>{getAnalisisRecomendaciones()}</td>
+              <td>servicio</td>
             </tr>
             <tr>
               <td>Control de calidad</td>
@@ -84,6 +88,7 @@ export default function Diagnosis() {
               <td className={getResultadoClass()}>{resultadoEvaluacion}</td>
               <td>{getValoracion()}</td>
               <td>{getAnalisisRecomendaciones()}</td>
+              <td>servicio</td>
             </tr>
           </tbody>
         </table>

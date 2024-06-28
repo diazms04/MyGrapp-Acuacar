@@ -1,0 +1,47 @@
+// UserPortal.scss
+
+.line-chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .progress_chart {
+    .recharts-cartesian-grid {
+      stroke: #e0e0e0;
+    }
+  
+    .recharts-x-axis, .recharts-y-axis {
+      font-size: 14px;
+      fill: #666;
+    }
+  
+    .recharts-tooltip-wrapper {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      padding: 10px;
+    }
+  
+    
+  
+    .recharts-line {
+      stroke-width: 3px;
+    }
+  }
+  
+ 
+.recharts-legend-wrapper{
+    width: 100% !important;
+}
+
+.recharts-default-legend{
+    width: 100%;
+
+}

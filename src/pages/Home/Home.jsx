@@ -20,7 +20,7 @@ export default function Home() {
             <h3>Herramienta que facilita la gestión responsable del agua</h3>
           </div>
           <div>
-            <button onClick={handleClick} className='logins'>Empleado Acuacar</button>
+            <button onClick={handleClick} className='logins'>Ingresar a My GRApp</button>
           </div>
         </div>
         

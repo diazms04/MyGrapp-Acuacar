@@ -5,8 +5,7 @@ import NavBar from '../../components/NavBar/NavBar';
 
 
 export default function ToolsGra() {
-  const location = useLocation();
-  const { companyName, nit } = location.state || {}; // Obtiene los datos pasados por la navegación
+
 
   const navigate = useNavigate();
 
@@ -19,8 +18,7 @@ export default function ToolsGra() {
       <NavBar rightChildren={<button className="back-button" onClick={handleButtonClick}>Informe</button>}/> {/* Incluimos el NavBar fuera del contenedor principal */}
       <div className='tools-gra-container'>
         <div className='company-info'>
-          <h2>Empresa: {companyName}</h2>
-          <h3>NIT: {nit}</h3>
+
         </div>
         <table className='tools-gra-table'>
           <thead>

@@ -8,7 +8,7 @@ function NavBar({ leftChildren, rightChildren }) {
         {leftChildren}
       </div>
       <div className="title_nav">
-        <h1 className="titles">My Grapp</h1>
+        <h1 className="titles">My GRApp</h1>
       </div>
       <div className="logos_pro">
         {rightChildren}
