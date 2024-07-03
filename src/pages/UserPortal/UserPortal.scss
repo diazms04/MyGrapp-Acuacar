@@ -5,7 +5,6 @@
 .AccountResume{
     width: 30%;
     // background-color: antiquewhite;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,13 +13,12 @@
 .resume {
     display: flex;
     flex-direction: column;
-    border: 0.5px solid black;
-    justify-content: center;
+
     border-radius: 20px;
     padding: 8px;
     width: 90%;
     margin-top: 10px;
-    height: 42vh;
+    height: 80vh;
 }
 
 .line-chart-container {
@@ -31,10 +29,13 @@
     border-radius: 10px;
     box-shadow: 10px 14px 8px rgba(0, 0, 0, 0.1);
     width: 98%;
-    background-color: rgb(244, 244, 244)
+    background-color: rgb(244, 244, 244);
+    height: 45vh;
   }
   
   .progress_chart {
+    width: 98% !important; 
+    height: 98% !important;
     .recharts-cartesian-grid {
       stroke: #d5d5d5;
     }
@@ -75,7 +76,7 @@ h3 {
 
 .container_charts {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     width: 70%;
 }
 
@@ -86,6 +87,71 @@ h3 {
 }
 
 .tabla-container {
+  margin-top: 10px;
+  flex-direction: column;
+  display: flex;
+
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 10px 14px 8px rgba(0, 0, 0, 0.1);
+  width: 98%;
+  background-color: rgb(244, 244, 244);
+  height: 39vh;
+}
+
+.resume {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  width: 70%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+
+}
+
+.resume h3 {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.resume-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+
+}
+
+.resume-content p {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Arial', sans-serif;
+  color: #555;
+}
+
+.resume-content p span:first-child {
+  font-weight: bold;
+}
+
+.process_title {
+  display: flex;
+  margin: 2vh;
+
+  h2{
+    margin: 0px;
+  }
+}
+
+#b_general {
+  margin: 16px;
+}
+
+
+.card_button{
   display: flex;
   justify-content: center;
 }
+
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './ToolsGra.scss'; // Archivo de estilos
 import NavBar from '../../components/NavBar/NavBar';
 

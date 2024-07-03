@@ -1,5 +1,6 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { Link, useNavigate } from 'react-router-dom';
 import './UserPortal.scss';
 import NavBar from '../../components/NavBar/NavBar';
 
@@ -24,12 +25,18 @@ const valoresY = [0, 20, 40, 60, 80, 100]; // Aquí puedes ajustar los valores s
 
 // Datos para la tabla
 const tableData = [
-    { practica: 'Practica 1', estado: 'En curso', fecha: '2024-06-01' },
-    { practica: 'Practica 2', estado: 'Completado', fecha: '2024-06-15' },
-    { practica: 'Practica 3', estado: 'Pendiente', fecha: '2024-06-20' }
+    { practica: 'Practica 1', estado: 'En curso', fecha: '2024-06-01', servicio: 'servicio 1' },
+    { practica: 'Practica 2', estado: 'Completado', fecha:'2024-06-15', servicio: 'servicio 2' },
+    { practica: 'Practica 3', estado: 'Pendiente', fecha: '2024-06-20', servicio: 'servicio 3' },
 ];
 
 function UserPortal() {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/toolsGra');
+
+  };
   
   // Función para formatear el valor con porcentaje
   const formatPercent = (value) => {
@@ -46,19 +53,32 @@ function UserPortal() {
             
           <div className='AccountResume'>
         
-            <div className='resume'>
-              <h3>Resume </h3>
-              <div>
-                <p>Estado: </p>
-                <p>Porcentaje: </p>
-                <p>Solicitudes Pendientes:</p>
-                <p>Numero de Solicitudes: </p>
-              </div>
+          <div className='resume'>
+            <div className='card_title'>
+            <h3>Infromación General</h3>
             </div>
+          
+          <div className='resume-content'>
+            <p><span>Estado:</span> <span>Completo</span></p>
+            <p><span>Porcentaje:</span> <span>75%</span></p>
+            <p><span>Solicitudes Pendientes:</span> <span>2</span></p>
+            <p><span>Numero de Solicitudes:</span> <span>10</span></p>
+            <p><span>Numero de Solicitudes:</span> <span>10</span></p>
+            <p><span>Numero de Solicitudes:</span> <span>10</span></p>
+            <p><span>Numero de Solicitudes:</span> <span>10</span></p>
+          </div>
+          
+          <div className='card_button'>
+            <button id='b_general' className='back-button' onClick={handleButtonClick}>Herramientas</button>
+          </div>
+            
+
+</div>
           </div>
         
           <div className='container_charts'>
             <div className="line-chart-container">
+              
               <LineChart className='progress_chart' 
                 width={1100}
                 height={300}
@@ -73,22 +93,20 @@ function UserPortal() {
                 <Line className='lin' type="monotone" dataKey="Progreso" stroke="#43aff3" />
               </LineChart>
             </div>
-          </div>
-    
-        </div>
-        <div>
-            <div>
-                <h3>Procesos Pendientes</h3>
-            </div>
+
+            
 
             <div className='tabla-container'>
+            <div className='process_title'>
+                <h2>Procesos Pendientes</h2>
+            </div>
               <table className='tabla-practicas'>
                 <thead>
                   <tr>
                     <th>Fecha de la Solicitud</th>
                     <th>Practica</th>
+                    <th>Servicio</th>
                     <th>Estado</th>
-                    
                   </tr>
                 </thead>
                 <tbody>
@@ -96,12 +114,18 @@ function UserPortal() {
                     <tr key={index}>
                         <td>{row.fecha}</td>
                         <td>{row.practica}</td>
+                        <td>{row.servicio}</td>
                         <td>{row.estado}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
+          </div>
+    
+        </div>
+        <div>
+           
         </div>
       </div>
     </>

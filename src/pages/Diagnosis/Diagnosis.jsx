@@ -47,7 +47,7 @@ export default function Diagnosis() {
         <table>
           <thead>
             <tr>
-              <th colSpan="6">Verificación de las condiciones de abastecimiento</th>
+              <th colSpan="7">Verificación de las condiciones de abastecimiento</th>
             </tr>
             <tr>
               <th>ELEMENTO</th>
@@ -56,6 +56,7 @@ export default function Diagnosis() {
               <th>VALORACIÓN</th>
               <th>DIAGNOSTICO</th>
               <th>SERVICIO RECOMENDADO</th>
+              <th>x</th>
             </tr>
           </thead>
           <tbody>
@@ -66,6 +67,7 @@ export default function Diagnosis() {
               <td>{getValoracion()}</td>
               <td>{getAnalisisRecomendaciones()}</td>
               <td>servicio</td>
+              <td><input type="checkbox" id="check1" name="option1" /></td>
             </tr>
             <tr>
               <td rowSpan="2">Mantenimiento</td>
@@ -74,6 +76,7 @@ export default function Diagnosis() {
               <td>{getValoracion()}</td>
               <td>{getAnalisisRecomendaciones()}</td>
               <td>servicio</td>
+              <td><input type="checkbox" id="check2" name="option2" /></td>
             </tr>
             <tr>
               <td>Seguimiento al cumplimiento normativo actividades de limpieza y desinfección</td>
@@ -81,6 +84,7 @@ export default function Diagnosis() {
               <td>{getValoracion()}</td>
               <td>{getAnalisisRecomendaciones()}</td>
               <td>servicio</td>
+              <td><input type="checkbox" id="check3" name="option3" /></td>
             </tr>
             <tr>
               <td>Control de calidad</td>
@@ -89,6 +93,7 @@ export default function Diagnosis() {
               <td>{getValoracion()}</td>
               <td>{getAnalisisRecomendaciones()}</td>
               <td>servicio</td>
+              <td><input type="checkbox" id="check4" name="option4" /></td>
             </tr>
           </tbody>
         </table>
