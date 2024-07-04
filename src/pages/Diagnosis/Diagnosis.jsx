@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from '../../components/NavBar/NavBar';
+import { Link, useNavigate } from 'react-router-dom';
 import BackButton from '../../components/BackButton/BackButton';
 import './Diagnosis.scss'; // Asegúrate de crear y enlazar este archivo CSS
 
 export default function Diagnosis() {
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/Payment');
+
+  };
+
+
   const [resultadoEvaluacion, setResultadoEvaluacion] = useState('');
 
   useEffect(() => {
@@ -97,7 +107,10 @@ export default function Diagnosis() {
             </tr>
           </tbody>
         </table>
+        <button className="back-button" onClick={handleButtonClick}>Solicitar Servicios</button>
+
       </div>
+
     </div>
   );
 }
