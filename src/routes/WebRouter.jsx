@@ -7,6 +7,7 @@ import Vca from '../pages/Vca/Vca'
 import Esctaa from '../pages/Esctaa/Esctaa'
 import Diagnosis from '../pages/Diagnosis/Diagnosis'
 import UserPortal from '../pages/UserPortal/UserPortal'
+import Payment from '../pages/Payment/Payment'
 import SignUP from '../pages/SignUP/SignUP'
 
 export function WebRouter() {
@@ -20,6 +21,7 @@ export function WebRouter() {
             <Route path='/vca' element={<Vca />} />
             <Route path='/esctaa' element={<Esctaa />} />
             <Route path='/diagnosis' element={<Diagnosis />} />
+            <Route path='/payment' element={<Payment />} />
       </Routes>
   )
 }

@@ -3,6 +3,7 @@
 }
 
 .AccountResume{
+    margin-top: 10px;
     width: 30%;
     // background-color: antiquewhite;
     display: flex;
@@ -10,66 +11,19 @@
     align-items: center;
 }
 
-.resume {
-    display: flex;
-    flex-direction: column;
 
-    border-radius: 20px;
-    padding: 8px;
-    width: 90%;
-    margin-top: 10px;
-    height: 80vh;
-}
 
 .line-chart-container {
-    margin-top: 10px;
     display: flex;
-    justify-content: center;
+    margin-top: 10px;
     align-items: center;
     border-radius: 10px;
     box-shadow: 10px 14px 8px rgba(0, 0, 0, 0.1);
     width: 98%;
     background-color: rgb(244, 244, 244);
-    height: 45vh;
+    min-height: 300px;
   }
   
-  .progress_chart {
-    width: 98% !important; 
-    height: 98% !important;
-    .recharts-cartesian-grid {
-      stroke: #d5d5d5;
-    }
-  
-    .recharts-x-axis, .recharts-y-axis {
-      font-size: 14px;
-      fill: #666;
-    }
-  
-    .recharts-tooltip-wrapper {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
-
-    }
-  
-    
-  
-    .recharts-line {
-      stroke-width: 3px;
-    }
-  }
-  
- 
-.recharts-legend-wrapper{
-    width: 100% !important;
-}
-
-.recharts-default-legend{
-    width: 100% !important;
-
-}
-
 h3 {
     margin: 0px;
 }
@@ -90,22 +44,32 @@ h3 {
   margin-top: 10px;
   flex-direction: column;
   display: flex;
-
   align-items: center;
   border-radius: 10px;
   box-shadow: 10px 14px 8px rgba(0, 0, 0, 0.1);
   width: 98%;
   background-color: rgb(244, 244, 244);
-  height: 39vh;
+
+}
+
+.tabla-container1 {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  width: 70%;
+
+
 }
 
 .resume {
+  display: flex;
+  flex-direction: column;
   background-color: #f9f9f9;
   border-radius: 10px;
   padding: 20px;
   width: 70%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
+  gap: 10px;
 }
 
 .resume h3 {
@@ -115,24 +79,9 @@ h3 {
 
 }
 
-.resume-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 80%;
-  gap: 1.5vh;
-}
 
-.resume-content p {
-  display: flex;
-  justify-content: space-between;
-  font-family: 'Arial', sans-serif;
-  color: #555;
-}
 
-.resume-content p span:first-child {
-  font-weight: bold;
-}
+
 
 .process_title {
   display: flex;
@@ -161,3 +110,16 @@ h3 {
   align-items: center;
   height: 10%;
 }
+
+.user-content {
+  border: 1px solid #ddd;
+}
+
+.img_drop{
+  width: 20%;
+}
+
+.drop{
+  width: 100%;
+}
+
