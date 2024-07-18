@@ -3,27 +3,44 @@ import { useNavigate } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import FooterP from '../../components/FooterP/FooterP';
 import './SignINAE.scss';
+import { Auth } from '../../../api/auth';
 
 export default function SignINAE() {
+  const authController = new Auth();
+  
   const navigate = useNavigate();
   const [showFirstForm, setShowFirstForm] = useState(true);
   const [companyName, setCompanyName] = useState('');
   const [nit, setNit] = useState('');
+  const [formData, setFormData] = useState({Usuario: null, Contrasena: null});
 
-  const handleFirstFormSubmit = (event) => {
+  const handleFirstFormSubmit = async (event) => {
     event.preventDefault(); // Prevent default form submission
 
     const form = event.target;
     const isValid = form.checkValidity();
+    console.log("🚀 ~ handleFirstFormSubmit ~ isValid:", isValid)
     if (isValid) {
       setShowFirstForm(false); // Hide the first form
     } else {
       form.reportValidity(); // Show validation messages
     }
+
+    const response = await authController.signin(formData);
+  
+    if (response) authController.setDataUser(response);
+
+    // const userData = authController.getDataUser();
+    // console.log("🚀 ~ handleFirstFormSubmit ~ userData:", JSON.parse(userData));
+    
     navigate('/UserPortal');
   };
 
- 
+  const handleChange = (e) => {
+    const dataObject = {...formData, [e.target.name]: e.target.value};
+    setFormData(dataObject);
+  }
+
 
   return (
     <>
@@ -37,11 +54,11 @@ export default function SignINAE() {
                 <form className='signin-form' onSubmit={handleFirstFormSubmit}>
                   <div className='signin-form-group'>
                     <label htmlFor='username'>Usuario</label>
-                    <input type='text' id='username' name='username' required />
+                    <input type='text' id='username' name='Usuario' value={formData.Usuario} onChange={handleChange} required />
                   </div>
                   <div className='signin-form-group'>
                     <label htmlFor='password'>Contraseña</label>
-                    <input type='password' id='password' name='password' required />
+                    <input type='password' id='password' name='Contrasena' value={formData.Contrasena} onChange={handleChange} required />
                   </div>
                   <div className='signin-form-group'>
                     <button type='submit' className='signin-submit-button'>Ingresar</button>

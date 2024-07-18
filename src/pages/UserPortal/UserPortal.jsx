@@ -2,6 +2,9 @@ import { useNavigate } from 'react-router-dom';
 import './UserPortal.scss';
 import NavBar from '../../components/NavBar/NavBar';
 import dropImg from '../../assets/896eb63c1827bbf6419fa31ef27e2462.png'
+import { User } from '../../../api';
+import { useEffect, useState } from 'react';
+import { Auth } from '../../../api/auth';
 
 // Datos para la gráfica lineal
 
@@ -17,6 +20,12 @@ const tableData = [
 ];
 
 function UserPortal() {
+  const userapi = new User();
+  const authController = new Auth();
+
+  const [userMe, setUserMe] = useState(null);
+  // const [idMe, setIdMe] = useState({});
+  
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
@@ -26,6 +35,17 @@ function UserPortal() {
   
   // Función para formatear el valor con porcentaje
   
+  useEffect(()=>{
+    (async ()=>{
+      const userData = JSON.parse(await authController.getDataUser());
+      console.log("🚀 ~ handleFirstFormSubmit ~ userData:", (userData));
+      const idMe = userData?._id;
+      
+      // const response = await userapi.postUser();
+      const responseget = await userapi.getUser(idMe);
+      setUserMe(responseget[0]);
+    })();
+  },[]);
 
   return (
     <>
@@ -41,15 +61,14 @@ function UserPortal() {
             <div className='card_title'>
             <h3>Infromación General</h3>
             </div>
-          
           <div className='user-content'>
-            <p><span>Usuario:</span> <span>Restaurante Vitrom</span></p>
-            <p><span>Dirección:</span> <span>Centro</span></p>
-            <p><span>Sector:</span> <span>Gastronomico</span></p>
-            <p><span>Póliza:</span> <span>942832</span></p>
-            <p><span>Año Evaluado:</span> <span>2023</span></p>
-            <p><span>Convenio:</span> <span>2023-2024</span></p>
-            <p><span>Estado GRR:</span> <span>48%</span></p>
+            <p><span>Usuario:</span> <span>{userMe?.Usuario}</span></p>
+            <p><span>Dirección:</span> <span>{userMe?.Contrasena}</span></p>
+            <p><span>Sector:</span> <span>{userMe?.Sector}</span></p>
+            <p><span>Póliza:</span> <span>{userMe?.Poliza}</span></p>
+            <p><span>Año Evaluado:</span> <span>{userMe?.AnioEvaluado}</span></p>
+            <p><span>Convenio:</span> <span>{userMe?.Convenio}</span></p>
+            <p><span>Estado GRR:</span> <span>{userMe?.EstadoGrap}</span></p>
             <p><span>Categoria 2023:</span> <span>GOLD</span></p>
 
           </div>
