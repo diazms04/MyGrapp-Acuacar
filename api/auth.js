@@ -1,6 +1,6 @@
 export class Auth {
-    // ipserver = "http://localhost:5500"
-    ipserver = "https://cb42f619-5500.use2.devtunnels.ms";
+    ipserver = "http://localhost:5500"
+    // ipserver = "https://cb42f619-5500.use2.devtunnels.ms";
     
     async signin(formData) {
         const url = `${this.ipserver}/api/v1/signin`;

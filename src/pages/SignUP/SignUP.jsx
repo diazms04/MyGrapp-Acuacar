@@ -2,25 +2,37 @@ import { useNavigate } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import FooterP from '../../components/FooterP/FooterP';
 import './SignUP.scss';
+import { useState } from 'react';
+import { User } from '../../../api';
 
 export default function SignUP() {
+  const userController = new User();
+  
   const navigate = useNavigate();
 
+  const [formData, setFormData] = useState({
+    Usuario: null,
+    NombreEmpresa: null,
+    Direccion: null,
+    Sector: null,
+    Poliza: null,
+    Contrasena: null,
+  });
 
-  const handleFirstFormSubmit = (event) => {
+
+  const handleFirstFormSubmit = async (event) => {
     event.preventDefault(); // Prevent default form submission
 
-    const form = event.target;
-    const isValid = form.checkValidity();
-    if (isValid) {
-      setShowFirstForm(false); // Hide the first form
-    } else {
-      form.reportValidity(); // Show validation messages
-    }
-    navigate('/UserPortal');
+    const response = await userController.postUser(formData);
+    if (!response) return;
+    navigate('/signINAcuacarEmployee');
   };
 
- 
+  const handleChange = (e) => {
+    const data = {...formData, [e.target.name]: e.target.value};
+    setFormData(data);
+  }
+
 
   return (
     <>
@@ -30,35 +42,31 @@ export default function SignUP() {
           <div id="signin_body" className='signin-section-body'>
             
               <div className='signin-form-container'>
-                <h2 className='signin-form-title'>Inicio de Sesión</h2>
+                <h2 className='signin-form-title'>Registro de Usuario</h2>
                 <form className='signin-form' onSubmit={handleFirstFormSubmit}>
                   <div className='signin-form-group'>
                     <label htmlFor='username'>Usuario</label>
-                    <input type='text' id='username' name='username' required />
+                    <input type='text' id='username' name='Usuario' value={formData.Usuario} required onChange={handleChange} />
                   </div>
                   <div className='signin-form-group'>
                     <label htmlFor='username'>Nombre De la Empresa</label>
-                    <input type='text' id='username' name='username' required />
+                    <input type='text' id='username' name='NombreEmpresa' value={formData.NombreEmpresa} required onChange={handleChange} />
                   </div>
                   <div className='signin-form-group'>
                     <label htmlFor='username'>Dirección</label>
-                    <input type='text' id='username' name='username' required />
+                    <input type='text' id='username' name='Direccion' value={formData.Direccion} required onChange={handleChange} />
                   </div>
                   <div className='signin-form-group'>
                     <label htmlFor='username'>Sector</label>
-                    <input type='text' id='username' name='username' required />
+                    <input type='text' id='username' name='Sector' value={formData.Sector} required onChange={handleChange} />
                   </div>
                   <div className='signin-form-group'>
                     <label htmlFor='username'>Poliza</label>
-                    <input type='text' id='username' name='username' required />
+                    <input type='number' id='username' name='Poliza' value={formData.Poliza} required onChange={handleChange} />
                   </div>
                   <div className='signin-form-group'>
                     <label htmlFor='password'>Contraseña</label>
-                    <input type='password' id='password' name='password' required />
-                  </div>
-                  <div className='signin-form-group'>
-                    <label htmlFor='password'>Repetir Contraseña</label>
-                    <input type='password' id='password' name='password' required />
+                    <input type='password' id='password' name='Contrasena' value={formData.Contrasena} required onChange={handleChange} />
                   </div>
                   <div className='signin-form-group'>
                     <button type='submit' className='signin-submit-button'>Ingresar</button>

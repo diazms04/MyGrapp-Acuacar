@@ -62,13 +62,13 @@ function UserPortal() {
             <h3>Infromación General</h3>
             </div>
           <div className='user-content'>
-            <p><span>Usuario:</span> <span>{userMe?.Usuario}</span></p>
-            <p><span>Dirección:</span> <span>{userMe?.Contrasena}</span></p>
-            <p><span>Sector:</span> <span>{userMe?.Sector}</span></p>
-            <p><span>Póliza:</span> <span>{userMe?.Poliza}</span></p>
-            <p><span>Año Evaluado:</span> <span>{userMe?.AnioEvaluado}</span></p>
-            <p><span>Convenio:</span> <span>{userMe?.Convenio}</span></p>
-            <p><span>Estado GRR:</span> <span>{userMe?.EstadoGrap}</span></p>
+            <p><span>Usuario:</span> <span>{userMe?.Usuario || ""}</span></p>
+            <p><span>Dirección:</span> <span>{userMe?.Direccion || ""}</span></p>
+            <p><span>Sector:</span> <span>{userMe?.Sector || ""}</span></p>
+            <p><span>Póliza:</span> <span>{userMe?.Poliza || ""}</span></p>
+            <p><span>Año Evaluado:</span> <span>{userMe?.AnioEvaluado || ""}</span></p>
+            <p><span>Convenio:</span> <span>{userMe?.Convenio || ""}</span></p>
+            <p><span>Estado GRR:</span> <span>{userMe?.EstadoGrap || ""}</span></p>
             <p><span>Categoria 2023:</span> <span>GOLD</span></p>
 
           </div>
