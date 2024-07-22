@@ -42,6 +42,8 @@ function UserPortal() {
       const idMe = userData?._id;
       
       // const response = await userapi.postUser();
+      if (!idMe) return alert("User no encontrado");
+
       const responseget = await userapi.getUser(idMe);
       setUserMe(responseget[0]);
     })();

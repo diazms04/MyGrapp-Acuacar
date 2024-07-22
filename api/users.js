@@ -3,8 +3,8 @@ export class User {
     // ipserver = "https://cb42f619-5500.use2.devtunnels.ms";
     
     async getUser(id) {
-        console.log("🚀 ~ User ~ getUser ~ url:", this.ipserver)
         id = id || ""
+        console.log("🚀 ~ User ~ getUser ~ id:", id)
         const url = `${this.ipserver}/api/v1/client?_id=${id}`;
         const params = {
             method: "GET",
@@ -17,7 +17,7 @@ export class User {
         
         const result = await response.json();
         
-        return result;
+        return response.status != 200 ? response : result;
     }
     
     async postUser(objectRegister) {
