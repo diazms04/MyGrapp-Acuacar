@@ -26,21 +26,25 @@ export default function SignINAE() {
       form.reportValidity(); // Show validation messages
     }
 
-    const response = await authController.signin(formData);
-  
-    if (response) authController.setDataUser(response);
-
-    // const userData = authController.getDataUser();
-    // console.log("🚀 ~ handleFirstFormSubmit ~ userData:", JSON.parse(userData));
+    try {
+      const response = await authController.signin(formData);
     
-    navigate('/UserPortal');
+      if (response) {
+        authController.setDataUser(response);
+        navigate('/UserPortal'); // Navigate to UserPortal only if the response is valid
+      } else {
+         // Show an error message if the response is invalid
+      }
+    } catch (error) {
+      console.error("Error during sign-in:", error);
+      alert('Error al iniciar sesión, por favor intente de nuevo.');
+    }
   };
 
   const handleChange = (e) => {
     const dataObject = {...formData, [e.target.name]: e.target.value};
     setFormData(dataObject);
   }
-
 
   return (
     <>
