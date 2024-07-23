@@ -5,7 +5,7 @@ import dropImg from '../../assets/896eb63c1827bbf6419fa31ef27e2462.png'
 import { User } from '../../../api';
 import { useEffect, useState } from 'react';
 import { Auth } from '../../../api/auth';
-
+import { Liquid } from '@ant-design/plots';
 // Datos para la gráfica lineal
 
 
@@ -49,10 +49,27 @@ function UserPortal() {
     })();
   },[]);
 
+
+  const DemoLiquid = () => {
+    const config = {
+      percent: 0.7,
+      style: {
+        shape: 'pin',
+        textFill: '#fff',
+        outlineBorder: 4,
+        outlineDistance: 4,
+        waveLength: 120,
+      },
+    };
+    return <Liquid {...config} />;
+  };
+  
+
   return (
+    
     <>
+
       <div className='container_User_Personal'>
-        
         <NavBar/>
 
         <div className='first_section'>
@@ -94,7 +111,7 @@ function UserPortal() {
             <div className="line-chart-container">
 
               <div className='img_drop'>
-              <img className="drop" src={dropImg} alt="ss" />
+              <DemoLiquid />
               </div>
               <div className='tabla-container1'>
             
@@ -159,6 +176,9 @@ function UserPortal() {
            
         </div>
       </div>
+
+
+      
     </>
   )
 }
