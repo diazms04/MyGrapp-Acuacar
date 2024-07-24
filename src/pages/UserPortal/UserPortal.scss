@@ -1,0 +1,125 @@
+.first_section {
+    display: flex;
+}
+
+.AccountResume{
+    margin-top: 10px;
+    width: 30%;
+    // background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.line-chart-container {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 14px 8px rgba(0, 0, 0, 0.1);
+    width: 98%;
+    background-color: rgb(244, 244, 244);
+    min-height: 300px;
+  }
+  
+h3 {
+    margin: 0px;
+}
+
+.container_charts {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.container_User_Personal {
+    height: 100vh;
+    width: 100%;
+    // background-color: antiquewhite;
+}
+
+.tabla-container {
+  margin-top: 10px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 10px 14px 8px rgba(0, 0, 0, 0.1);
+  width: 98%;
+  background-color: rgb(244, 244, 244);
+
+}
+
+.tabla-container1 {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  width: 70%;
+
+
+}
+
+.resume {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  width: 70%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+}
+
+.resume h3 {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+
+}
+
+
+
+
+
+.process_title {
+  display: flex;
+  margin: 2vh;
+
+  h2{
+    margin: 0px;
+  }
+}
+
+#b_general {
+  margin: 16px;
+}
+
+
+.card_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+}
+
+.card_title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+}
+
+.user-content {
+  border: 1px solid #ddd;
+}
+
+.img_drop{
+  width: 20%;
+}
+
+.drop{
+  width: 100%;
+}
+

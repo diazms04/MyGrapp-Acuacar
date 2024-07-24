@@ -1,0 +1,48 @@
+.nav_container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  background-color: rgb(238, 238, 238);
+}
+
+.logos_pro {
+  width: 33.3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title_nav {
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Merriweather Sans', sans-serif !important;
+}
+
+.sesion_nav {
+  width: 33.3%;
+}
+
+.titles {
+  color: #378AC4;
+}
+
+.logos_pro img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .nav_container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .logos_pro, .title_nav, .sesion_nav {
+    width: 100%;
+    justify-content: center;
+  }
+}

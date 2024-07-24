@@ -1,0 +1,180 @@
+/* Container for the entire Sign In page */
+.signin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container for the context */
+.signin-context {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Style for the main section body */
+.signin-section-body {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container for the form */
+.signin-form-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Style for the form title */
+.signin-form-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Style for the form itself */
+.signin-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style for each form group */
+.signin-form-group {
+  margin-bottom: 20px;
+}
+
+/* Style for the labels within the form */
+.signin-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Style for the inputs within the form */
+.signin-form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style for the submit button */
+.signin-submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Style for the submit button on hover */
+.signin-submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the submit button on active */
+.signin-submit-button:active {
+  transform: scale(0.95);
+}
+
+/* Adjusted styles to avoid conflicts with Home page */
+.container_home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.context {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.context h3 {
+  font-family: 'Merriweather Sans', sans-serif !important;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.section_body {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  background-color: #428bca;
+  border: none;
+  color: white;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 7px;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
+button:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el cursor */
+}
+
+button:active {
+  transform: scale(0.95); /* Hace que el botón parezca presionado */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+ 
+
+  .signin-section-body {
+    height: auto;
+    padding: 20px;
+  }
+
+  .signin-form-container {
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+  }
+
+  .signin-form-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .signin-form-group input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .signin-submit-button {
+    font-size: 16px;
+    padding: 8px;
+  }
+}

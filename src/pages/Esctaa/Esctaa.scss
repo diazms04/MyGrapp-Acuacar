@@ -1,0 +1,91 @@
+.esctaa-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 20px; /* Separación del contenido siguiente */
+}
+
+.esctaa-container h1 {
+  text-align: center;
+
+}
+
+.tabla {
+  width: 100%;
+  max-width: 1000px;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px; /* Margen superior */
+  margin-bottom: 20px; /* Margen inferior */
+}
+
+.tabla th,
+.tabla td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla th {
+  background-color: #447bae;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.tabla thead tr:first-child th {
+  background-color: #3a89be;
+  font-size: px; /* Tamaño de fuente ajustado */
+  text-align: center;
+  padding: 15px;
+}
+
+.tabla tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tabla tbody tr:hover {
+  background-color: #e9e9e9;
+}
+
+.tabla select,
+.tabla input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.tabla select {
+  background-color: #f0f0f0;
+}
+
+.tabla td.select-cell {
+  position: relative;
+}
+
+.tabla td.select-cell::after {
+  content: '\25bc'; /* Unicode character for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.tabla input[type="number"] {
+  text-align: right;
+}
+
+.tabla .estimation-cell {
+  font-weight: bold;
+}
