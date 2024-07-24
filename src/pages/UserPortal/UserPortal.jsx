@@ -5,7 +5,7 @@ import dropImg from '../../assets/896eb63c1827bbf6419fa31ef27e2462.png'
 import { User } from '../../../api';
 import { useEffect, useState } from 'react';
 import { Auth } from '../../../api/auth';
-
+import { Liquid } from '@ant-design/plots';
 // Datos para la gráfica lineal
 
 
@@ -42,15 +42,34 @@ function UserPortal() {
       const idMe = userData?._id;
       
       // const response = await userapi.postUser();
+      if (!idMe) return alert("User no encontrado");
+
       const responseget = await userapi.getUser(idMe);
       setUserMe(responseget[0]);
     })();
   },[]);
 
+
+  const DemoLiquid = () => {
+    const config = {
+      percent: 0.7,
+      style: {
+        shape: 'pin',
+        textFill: '#fff',
+        outlineBorder: 4,
+        outlineDistance: 4,
+        waveLength: 120,
+      },
+    };
+    return <Liquid {...config} />;
+  };
+  
+
   return (
+    
     <>
+
       <div className='container_User_Personal'>
-        
         <NavBar/>
 
         <div className='first_section'>
@@ -62,13 +81,13 @@ function UserPortal() {
             <h3>Infromación General</h3>
             </div>
           <div className='user-content'>
-            <p><span>Usuario:</span> <span>{userMe?.Usuario}</span></p>
-            <p><span>Dirección:</span> <span>{userMe?.Contrasena}</span></p>
-            <p><span>Sector:</span> <span>{userMe?.Sector}</span></p>
-            <p><span>Póliza:</span> <span>{userMe?.Poliza}</span></p>
-            <p><span>Año Evaluado:</span> <span>{userMe?.AnioEvaluado}</span></p>
-            <p><span>Convenio:</span> <span>{userMe?.Convenio}</span></p>
-            <p><span>Estado GRR:</span> <span>{userMe?.EstadoGrap}</span></p>
+            <p><span>Usuario:</span> <span>{userMe?.Usuario || ""}</span></p>
+            <p><span>Dirección:</span> <span>{userMe?.Direccion || ""}</span></p>
+            <p><span>Sector:</span> <span>{userMe?.Sector || ""}</span></p>
+            <p><span>Póliza:</span> <span>{userMe?.Poliza || ""}</span></p>
+            <p><span>Año Evaluado:</span> <span>{userMe?.AnioEvaluado || ""}</span></p>
+            <p><span>Convenio:</span> <span>{userMe?.Convenio || ""}</span></p>
+            <p><span>Estado GRR:</span> <span>{userMe?.EstadoGrap || ""}</span></p>
             <p><span>Categoria 2023:</span> <span>GOLD</span></p>
 
           </div>
@@ -92,7 +111,7 @@ function UserPortal() {
             <div className="line-chart-container">
 
               <div className='img_drop'>
-              <img className="drop" src={dropImg} alt="ss" />
+              <DemoLiquid />
               </div>
               <div className='tabla-container1'>
             
@@ -157,6 +176,9 @@ function UserPortal() {
            
         </div>
       </div>
+
+
+      
     </>
   )
 }
