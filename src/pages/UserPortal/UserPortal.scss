@@ -21,7 +21,7 @@
     box-shadow: 10px 14px 8px rgba(0, 0, 0, 0.1);
     width: 98%;
     background-color: rgb(244, 244, 244);
-    min-height: 300px;
+    height: 300px;
   }
   
 h3 {
@@ -66,10 +66,11 @@ h3 {
   flex-direction: column;
   background-color: #f9f9f9;
   border-radius: 10px;
-  padding: 20px;
-  width: 70%;
+  align-items: center;
+  width: 80%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  gap: 10px;
+  gap: 1vh;
+  height: 600px;
 }
 
 .resume h3 {
@@ -101,7 +102,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20%;
+
 }
 
 .card_title{
@@ -113,6 +114,7 @@ h3 {
 
 .user-content {
   border: 1px solid #ddd;
+  width: 90%;
 }
 
 .img_drop{
