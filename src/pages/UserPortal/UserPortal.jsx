@@ -55,9 +55,9 @@ function UserPortal() {
       percent: 0.7,
       style: {
         shape: 'pin',
-        textFill: '#fff',
+        textFill: '#333',
         outlineBorder: 4,
-        outlineDistance: 4,
+        outlineDistance: 2,
         waveLength: 120,
       },
     };
@@ -81,16 +81,33 @@ function UserPortal() {
             <h3>Infromación General</h3>
             </div>
           <div className='user-content'>
-            <p><span>Usuario:</span> <span>{userMe?.Usuario || ""}</span></p>
-            <p><span>Dirección:</span> <span>{userMe?.Direccion || ""}</span></p>
-            <p><span>Sector:</span> <span>{userMe?.Sector || ""}</span></p>
-            <p><span>Póliza:</span> <span>{userMe?.Poliza || ""}</span></p>
-            <p><span>Año Evaluado:</span> <span>{userMe?.AnioEvaluado || ""}</span></p>
-            <p><span>Convenio:</span> <span>{userMe?.Convenio || ""}</span></p>
-            <p><span>Estado GRR:</span> <span>{userMe?.EstadoGrap || ""}</span></p>
-            <p><span>Categoria 2023:</span> <span>GOLD</span></p>
-
-          </div>
+          <p>
+                  <span className = "espec">Usuario:</span> <span>{userMe?.Usuario || ""}</span>
+                </p>
+                <p>
+                  <span className = "espec">Dirección:</span> <span>{userMe?.Direccion || ""}</span>
+                </p>
+                <p>
+                  <span className = "espec">Sector:</span> <span>{userMe?.Sector || ""}</span>
+                </p>
+                <p>
+                  <span className = "espec">Póliza:</span> <span>{userMe?.Poliza || ""}</span>
+                </p>
+                <p>
+                  <span className = "espec">Año Evaluado:</span>{" "}
+                  <span>{userMe?.AnioEvaluado || ""}</span>
+                </p>
+                <p>
+                  <span className = "espec">Convenio:</span> <span>{userMe?.Convenio || ""}</span>
+                </p>
+                <p>
+                  <span className = "espec">Estado GRR:</span>{" "}
+                  <span>{userMe?.EstadoGrap || ""}</span>
+                </p>
+                <p>
+                  <span className = "espec">Categoria 2023:</span> <span>GOLD</span>
+                </p>
+              </div>
           
           <div className='user-content'>
             <h4>Portal de Novedades</h4>

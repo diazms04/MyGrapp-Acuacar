@@ -1,44 +1,42 @@
 .first_section {
-    display: flex;
+  display: flex;
 }
 
-.AccountResume{
-    margin-top: 10px;
-    width: 30%;
-    // background-color: antiquewhite;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.AccountResume {
+  margin-top: 10px;
+  width: 30%;
+  // background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-
 
 .line-chart-container {
-    display: flex;
-    margin-top: 10px;
-    align-items: center;
-    
-    border-radius: 10px;
-    box-shadow: 10px 14px 8px rgba(0, 0, 0, 0.1);
-    width: 98%;
-    background-color: rgb(244, 244, 244);
-    height: 250px;
-  }
-  
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+
+  border-radius: 10px;
+  box-shadow: 10px 14px 8px rgba(0, 0, 0, 0.1);
+  width: 98%;
+  background-color: rgb(244, 244, 244);
+  height: 250px;
+}
+
 h3 {
-    margin: 0px;
+  margin: 0px;
 }
 
 .container_charts {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
 }
 
 .container_User_Personal {
-    height: 100vh;
-    width: 100%;
-    // background-color: antiquewhite;
+  height: 100vh;
+  width: 100%;
+  // background-color: antiquewhite;
 }
 
 .tabla-container {
@@ -50,7 +48,6 @@ h3 {
   box-shadow: 10px 14px 8px rgba(0, 0, 0, 0.1);
   width: 98%;
   background-color: rgb(244, 244, 244);
-
 }
 
 .tabla-container1 {
@@ -59,8 +56,6 @@ h3 {
   align-items: center;
   border-radius: 10px;
   width: 70%;
-
-
 }
 
 .resume {
@@ -75,22 +70,28 @@ h3 {
   height: 600px;
 }
 
-.resume h3 {
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  color: #333;
+.user-content {
+  font-family: sans-serif;
+  border-radius: 10px;
+  padding-left: 10%;
 
+  .espec {
+    color: #333;
+    font-weight: bold;
+  }
 }
 
-
-
-
+.resume h3 {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
 
 .process_title {
   display: flex;
   margin: 2vh;
 
-  h2{
+  h2 {
     margin: 0px;
   }
 }
@@ -99,15 +100,13 @@ h3 {
   margin: 8px;
 }
 
-
-.card_button{
+.card_button {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
-.card_title{
+.card_title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,12 +118,12 @@ h3 {
   width: 90%;
 }
 
-.img_drop{
+.img_drop {
   padding: 20px;
   width: 20%;
 }
 
-.drop{
+.drop {
   width: 100%;
 }
 
@@ -139,6 +138,6 @@ h3 {
   width: 100%;
 }
 
-.tabla-practicas{
+.tabla-practicas {
   margin: 0px;
 }
