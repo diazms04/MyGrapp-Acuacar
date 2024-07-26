@@ -99,7 +99,7 @@ function UserPortal() {
             <p><a href="https://www.acuacar.com/InicioSesion?returnurl=%2fServicios%2fLaboratorio-calidad-de-aguas">Acuacar</a></p>
             
           </div>
-                      <button id='b_general' className='back-button' onClick={handleButtonClick}>Herramientas</button>
+            <button id='b_general' className='back-button' >Herramientas</button>
 
           
             
@@ -137,7 +137,14 @@ function UserPortal() {
                   ))}
                 </tbody>
               </table>
-            </div>
+              <div className='bubel'>
+                <div className='free'></div>
+                <div className='free'></div>
+                <div className='free'></div>
+                <div className='free'></div>
+                <div  className='free'><button id='b_general' className='back-button' onClick={handleButtonClick}>Herramientas</button>
+                </div>
+              </div>            </div>
             </div>
               
 
@@ -168,6 +175,15 @@ function UserPortal() {
                   ))}
                 </tbody>
               </table>
+              <div className='bubel'>
+                <div className='free'></div>
+                <div className='free'></div>
+                <div className='free'></div>
+                <div className='free'></div>
+                <div className='free'></div>
+                <div  className='free'><button id='b_general' className='back-button'>Ver mas..</button>
+                </div>
+              </div>
             </div>
           </div>
     
